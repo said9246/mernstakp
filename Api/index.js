@@ -21,27 +21,17 @@ app.listen(3000, () => {
 
 
 // // 1-database connection
-// console.log("DB_URI:", process.env.DB_URI);
-// mongoose.connect(process.env.DB_URI, {
-//   // useUnifiedTopology: true,
-//   serverSelectionTimeoutMS: 30000,
-// })   
-//   .then(() => {
-//     console.log('Connected to MongoDB');
-//   })
-//   .catch((err) => {
-//     console.error('Error connecting to MongoDB:', err);
-//   });
-
-
-mongoose.connect("mongodb+srv://Said:Said123@project1.8tk2tfy.mongodb.net/Khan")
+console.log("DB_URI:", process.env.DB_URI);
+mongoose.connect(process.env.DB_URI, {
+  // useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 30000,
+})   
   .then(() => {
-    console.log("Connected to MongoDB");
+    console.log('Connected to MongoDB');
   })
-  .catch((e) => {
-    console.log(e);
+  .catch((err) => {
+    console.error('Error connecting to MongoDB:', err);
   });
-
 
 
   const __dirname = path.resolve();
